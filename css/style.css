@@ -1,0 +1,322 @@
+*{  
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    transition: all .30s ease;
+    color: #1A1A1A;
+}
+body{
+    height: 100%;
+    min-height: 100vh;
+}
+/* ==================================================================== 
+    typography
+      */
+
+/* ====================================================================
+    layouts
+     */
+.container{
+    width: 90%;
+    margin: auto;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0 .5rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #a9a9a9;
+}
+header{
+    width: 100%;
+    position: sticky;
+    z-index: 900;
+    background-color: #fff;
+    top: 0;
+    box-shadow: 0 0px 5px rgba(0,0,0,0.1);
+}
+/* =====================================================================
+    Img
+     */
+.logo-img{
+    width: 70px;
+    margin-left: -2rem;
+}
+
+/* search section */
+.search-section{
+    display: flex;
+    align-items: center;
+}
+.search-section i{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.search-section input{
+    border: 0;
+    font-size: .9rem;
+    color: black;
+    padding:0 .5rem;
+    font-weight: 400;
+    letter-spacing: .06rem;
+}
+.search-section input:focus-visible{         
+    outline: none;
+}
+
+/* logo right section */
+.logo-right-section{
+    display: flex;
+    align-items: center;
+}
+.logo-right-section i{
+    font-size: 1.3rem;
+    font-weight: 580;
+    margin-left: 1.3rem;
+    color: black;
+}
+
+/* navigation container */
+nav{
+    padding: 1rem 0;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    font-size: .9rem;
+    display: block;      /* this is very important czu it <a> is a inline and taking the hole space */
+    text-align: center;
+    margin:0 1rem;
+    color: black;
+    border-bottom: 1px solid transparent;
+}
+.active{
+    color: #FF0000;
+}
+
+/* category sections */
+.selector{
+    margin: 2rem auto;
+    overflow: scroll;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(10,100px);
+    text-align: center;
+    scrollbar-width: none;        /* removing the scrollbar logo */
+}
+
+.category div{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #F3E5B6;
+}
+.category p{
+    font-size: .9rem;
+    letter-spacing: .02rem;
+    text-transform: uppercase;
+}
+.category div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* hero section img */
+.hero-section{
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.hero-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* show-case section */
+.showcase-grid{
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    justify-content: center;
+    grid-auto-rows: 200px;
+}
+.showcase-grid div{
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.showcase-grid h3{
+    font-weight: 500;
+    position: absolute;
+    color: #fff;
+    left: 20px ;
+    z-index: 100;
+    bottom: 10px;
+}
+.showcase-grid img{
+    width: 100%;
+    object-fit: cover;
+}
+.hero1-img{
+    grid-row: 1/3;
+}
+
+
+/* collection */
+.collection-heading{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 3.5rem auto 2rem auto;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.collection div{
+    overflow: hidden;
+    border-radius: 20px;
+}
+.collection{
+    margin: 1rem auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.collection img{
+    width: 100%;
+}
+
+
+
+/* footer section */
+footer{
+    background-color: #F2F2F2;
+    padding: 1rem;
+}
+.footer-box{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+}
+.footer-box h4{
+    margin-bottom: .8rem;
+    font-size: .9rem;
+    letter-spacing: .04rem;
+    text-transform: uppercase;
+}
+.footer-box ul{
+    font-size: .85rem;
+    margin-bottom: .7rem;
+}
+.footer-box p{
+    font-size: .85rem;
+    margin-bottom:.5rem ;
+}
+.footer-box input{
+    padding: .5rem;
+}
+
+/* social */
+.social{
+    display: flex;
+}
+.social i{
+    font-size: 1.3rem;
+    padding: .7rem;
+    border: 1px solid #999999;
+    border-right: 0;
+}
+.social i:last-child{
+    border-right: 1px solid #333;
+}
+
+
+
+
+/* ==================================================================
+    transitions
+     */
+nav a:hover{
+    border-bottom: 1px solid black;
+}
+.active:hover{
+    border-color: #FF0000;
+}
+.showcase-grid img:hover{
+    transform: scale(1.1);
+}
+.collection div:hover{
+    transform: scale(1.02);
+}
+.social i:hover{
+    background-color: #1A1A1A;
+    color:#fff ;
+}
+.footer-box a:hover{
+    text-decoration: underline;
+    transform: translatex(.5rem);
+}
+
+
+
+/* ===================================================================
+    media queries
+     */
+@media (max-width:930px){
+    .collection{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width:750px){
+    .collection{
+        width: 70%;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer-box{
+    grid-template-columns: repeat(1,1fr);
+    }
+}
+@media(max-width:700px){
+    nav{
+        display: none;
+    }
+    .selector{
+        gap: 10px;
+    }
+    .category div{
+        width: 80px;
+        height: 80px;
+        margin: auto;
+    }
+    .category p{
+        font-size: .8rem;
+    }
+}
+@media (max-width:550px){
+    .collection{
+        width: 100%;
+        justify-content: center;
+        grid-template-columns: repeat(1,255px);
+    }
+    .search-section{
+        display: none;
+    }
+    .logo-img{
+        margin: 0;
+    }
+}
